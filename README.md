@@ -18,7 +18,7 @@ evaluate investments in projects. This is a simple demonstration.
 
 2.  如果我们设置一个月的**利润目标为10万元**, **达成目标的概率**是多少? **亏损风险** (利润小于0的概率) 是多少?
 
-3.  利润的**累积分布函数** (cumulative distribution)?
+3.  利润的**累积分布函数** (cumulative distribution)? （绘图即可）
 
 4.  经过第一轮的探索, 你与业务分享你的结果. 业务发现你的模拟出现了严重的漏洞. 以他们的业务经验,
     **单个栗子的成本与其转化率是强关联关系的**.
