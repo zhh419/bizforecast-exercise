@@ -20,7 +20,7 @@ old <- theme_set(theme_minimal() + theme(text = element_text(family = "Noto Sans
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-```{r}
+```{r echo = TRUE}
 profit_day <- function(){
     
     # 栗子数量
@@ -50,7 +50,7 @@ tbl1 <- data_frame(index = 1:10000, profit = y/10000)
 
 
 ## 月利润分布
-```{r}
+```{r echo = TRUE}
 # 月利润分布
 tbl1 %>% 
     ggplot() + 
@@ -61,12 +61,12 @@ tbl1 %>%
 
 
 ## 95%置信度，利润的范围(万元)
-```{r}
+```{r echo = TRUE}
 quantile(tbl1$profit,c(0.025,0.975))
 ```
 
 ## 达成目标概率以及亏损风险
-```{r}
+```{r echo = TRUE}
 tbl1 %>% 
     mutate(up10 = if_else(profit >= 10, 1, 0),
            down0 = if_else(profit < 0, 1, 0)) %>% 
@@ -75,7 +75,7 @@ tbl1 %>%
 ```
 
 ## 利润的累计分布函数
-```{r}
+```{r echo = TRUE}
 tbl1 %>% 
     ggplot() + 
     stat_ecdf(aes(profit))
